@@ -26,25 +26,14 @@ const Task = (props) => {
         setEdit(false)
         dispatch(editTask({ id: props.items.id, name: name, time: time, isComplete: isComplete }))
     }
-
-    const [searchKeyword, setSearchKeyword] = useState('');
-
-
-    const handleKeyPress = (e) => {
-        console.log(searchKeyword);
-        if (e.key === 'Enter') {
-            setName(e.target.value);
-            window.location.reload();
-        }
-        
-        
-    };
-
-
-
-
-
-
+    // const [searchKeyword, setSearchKeyword] = useState('');
+    // const handleKeyPress = (e) => {
+    //     console.log(searchKeyword);
+    //     if (e.key === 'Enter') {
+    //         setName(e.target.value);
+    //         window.location.reload();
+    //     }
+    // };
     // const handleKeyPress = (event) => {
     //     if(event.key === 'Enter'){
     //         setName(event.target.value)
@@ -53,6 +42,7 @@ const Task = (props) => {
     return (
         <>
             {!edit ?
+            
                 <Card sx={{ maxWidth: 200, margin: 'auto', marginTop: '10px', background: teal['500'] }}>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
@@ -80,7 +70,7 @@ const Task = (props) => {
                 </Card>
                 : <Card sx={{ maxWidth: 200, margin: 'auto', marginTop: '10px', background: teal['500'] }}>
                     <CardContent>
-                        <TextField id="outlined-basic" variant="outlined" defaultValue={props.items.name} onChange={(e) => setName(e.target.value)}  onKeyPress={(e) => handleKeyPress(e)}  />
+                        <TextField id="outlined-basic" variant="outlined" defaultValue={props.items.name} onChange={(e) => setName(e.target.value)}   />
                         {/* <Typography variant="body2" color="text.secondary">
                             {props.items.time}
                         </Typography> */}

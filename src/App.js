@@ -9,6 +9,7 @@ import { cyan, teal,lime } from '@mui/material/colors';
 import Tabs from '@mui/material/Tabs';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import TasksComp from './Component/ToDo/TasksComp';
+import PostComp from './Component/Post/PostComp';
 
 function App() {
   const color = teal['500'];
@@ -55,6 +56,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeComp />} />
         <Route path="/todo" element={<TasksComp />} />
+        <Route path="/post" element={<PostComp />} />
       </Routes>
     </div>
   );

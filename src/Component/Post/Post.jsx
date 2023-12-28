@@ -17,8 +17,6 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 
 
-
-
 const Post = (props) => {
 
   const [cntLike, setCntLike] = useState(0)
@@ -27,7 +25,8 @@ const Post = (props) => {
   const [time, setTime] = useState(props.items.time)
   const [name, setName] = useState(props.items.name)
   const [content, setContent] = useState(props.items.content)
-  const [words, setWords] = useState((props.items.content) ?.slice(0, 50))
+
+  const [words, setWords] = useState((props.items.content)?.slice(0, 50))
   const [readMore, setReadMore] = useState(false);
   const toEdit = () => {
     setEdit(false)
